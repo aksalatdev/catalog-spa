@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "606a926f404a2e4ef0edf765"
+  },
+  "url_gambar": "https://mancode.id/media/images/Supreme.width-800.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a9f770dff6831c8bb2c89"
+  },
+  "url_gambar": "https://www.teropongku.com/wp-content/uploads/2019/12/Jersey-Nike.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a9fd80dff6831c8bb2c8a"
+  },
+  "url_gambar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/abb959fb-5e24-440d-becb-a971fbd7b592/dri-fit-iowa-mens-3-4-sleeve-t-shirt-ktM4S6.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606a9fff0dff6831c8bb2c8b"
+  },
+  "url_gambar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/30d54de5-b47e-434d-9d9d-c80bf178a033/pro-dri-fit-mens-3-4-sleeve-baseball-top-fwDkVL.jpg",
+  "__v": 0
+}]

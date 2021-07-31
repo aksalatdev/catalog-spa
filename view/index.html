@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AxL Store</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/axl1.png" rel="icon">
+  <link href="/assets/img/axl1.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Lonely - v4.1.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-lonely/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.js" integrity="sha512-Z0dNfC81uEXC2iTTXtE0rM18I3ATkwn1m8Lxe0onw/uPEEkCmVZd+H8GTeYGkAZv50yvoSR5N3hoy/Do2hNSkw==" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue-icons.common.js" integrity="sha512-1JotZA+Yp2KTsv3oZUMaoStKXHJbfOoOCFIVw6NjNIhbLXRYgPfHlnfCZELZSa7Pl2gERROUiVjn6goWxnh5vA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue-icons.common.min.js" integrity="sha512-+e+Co6xInJyWHIqLkhtaBPxFk+RU1bt/ajG/x5l7UuPiPH9n9gwxmfAtTSkX30JM2dZMoM1KXKjNucsrQrS7cQ==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue-icons.css" integrity="sha512-ofvNcyNADx27Xw9edhhecFoL1M+QamynjUyIDVrkLYemVgvWpT5jMA4box8FFaH+umvQyGEDAHyv1CGpmP8NGw==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.2/bootstrap-vue.min.css" integrity="sha512-YnP4Ql71idaMB+/ZG38+1adSSQotdqvixQ+dQg8x/IFA4heIj6i0BC31W5T5QUdK1Uuwa01YdqdcT42q+RldAg==" crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
+    <h1>AxL</h1>
+    <h2>Store</h2>
+    <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">AxL Store</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Catalog</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center" id="ab">
+              <h3>About AxL Store</h3>
+              <p v-for="abb in ab">
+                {{abb.content}}
+              </p>
+              <div class="row">
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-emoji-smile"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Happy Clients</strong> </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-journal-richtext"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Projects</strong> </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-clock"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Years of experience</strong> </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-award"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Awards</strong> </p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <!-- End Resume Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" id="srv">
+          <h2>Services</h2>
+          <p v-for="serr in srv">{{serr.content}}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Consignment</a></h4>
+              <p class="description">Menitipkan barang-barang seperti sepatu, topi dan barang branded lainnya tanpa fee</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Pelayanan Cepat</a></h4>
+              <p class="description">Pelayanan 24 jam dan sangat cepat</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Laku Dengan Cepat</a></h4>
+              <p class="description">Barang yang dititipkan di kami pasti terjual dengan cepat</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Admin Fast Respon & Customer Service</a></h4>
+              <p class="description">Fast respon dengan admin</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!--<section>
+    <div class="container" id="bj">
+    <div class="card shadow-sm" v-for="gambar_baju in ba">
+      <img :src="gambar_baju.url_gambar">
+
+      <div class="card-body">
+        <p class="card-text">
+          <h5>{{isi_blog.judul}}  </h5>
+          {{isi_blog.isi}}
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Lihat Penawaran</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" >
+        <div class="section-title" id="ctl">
+          <h2>Catalog</h2>
+          <p v-for="catalo in ctl">{{catalo.content}}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Baju</li>
+              <li data-filter=".filter-card">Sepatu</li>
+              <li data-filter=".filter-web">Topi</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row portfolio-container">
+          
+          <div id="bj">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="baju in ba">
+            <div class="portfolio-wrap">
+              <img :src="baju.url_gambar" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div id="sp">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card" v-for="baju in sa">
+              <div class="portfolio-wrap">
+                <img :src="baju.url_gambar" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>App</p>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tp">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web" v-for="baju in tepe">
+              <div class="portfolio-wrap">
+                <img :src="baju.url_gambar" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>App</p>
+                </div>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section> <!-- End Portfolio Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us Here</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>AxL Store</h3>
+              <p>A Curated Consignment Store For Sneakers & Streetwear Enthusiasts</p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-geo-alt"></i>
+                <p>Jl Sigura gura<br>Malang</p>
+              </div>
+
+              <div class="d-flex align-items-center mt-4">
+                <i class="bi bi-envelope"></i>
+                <p>axlstore@gmail.com</p>
+              </div>
+
+              <div class="d-flex align-items-center mt-4">
+                <i class="bi bi-phone"></i>
+                <p>+62 8774512321</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>AxL Store</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-lonely/ -->
+        
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+   <!-- SCRIPT PEMANGGILAN DATA -->
+   <script>
+    ///object vue bajulur
+    var klambi = new Vue({    
+               el:'#bj',
+               data: {
+                  ba:[],
+                },
+               methods: {
+                  upDate_data: function() {
+                    axios.get('http://localhost:3000/api/ambilbaju').then(response => this.ba=response.data);
+                  }
+               },
+               mounted() {
+                    axios.get('http://localhost:3000/api/ambilbaju').then(response => this.ba=response.data);
+                    this.upDate_data();
+                    this.timer = setInterval(this.upDate_data, 1000);
+              }
+      })
+
+      ///object vue sepatu
+      var sikil = new Vue({    
+               el:'#sp',
+               data: {
+                  sa:[],
+                },
+               methods: {
+                  upDate_data: function() {
+                    axios.get('http://localhost:3000/api/ambilsepatu').then(response => this.sa=response.data);
+                  }
+               },
+               mounted() {
+                    axios.get('http://localhost:3000/api/ambilsepatu').then(response => this.sa=response.data);
+                    this.upDate_data();
+                    this.timer = setInterval(this.upDate_data, 1000);
+              }
+      })
+
+      ///object vue topi
+      var sirah = new Vue({    
+               el:'#tp',
+               data: {
+                  tepe:[],
+                },
+               methods: {
+                  upDate_data: function() {
+                    axios.get('http://localhost:3000/api/ambiltopi').then(response => this.tepe=response.data);
+                  }
+               },
+               mounted() {
+                    axios.get('http://localhost:3000/api/ambiltopi').then(response => this.tepe=response.data);
+                    this.upDate_data();
+                    this.timer = setInterval(this.upDate_data, 1000);
+              }
+      })
+ 
+      ///object vue about
+      var about = new Vue({    
+               el:'#ab',
+               data: {
+                  ab:[],
+                },
+               methods: {
+                  upDate_data: function() {
+                    axios.get('http://localhost:3000/api/ambilabout').then(response => this.ab=response.data);
+                  }
+               },
+               mounted() {
+                    axios.get('http://localhost:3000/api/ambilabout').then(response => this.ab=response.data);
+                    this.upDate_data();
+                    this.timer = setInterval(this.upDate_data, 1000);
+              }
+      })
+
+///object vue service
+var service = new Vue({    
+               el:'#srv',
+               data: {
+                  srv:[],
+                },
+               methods: {
+                  upDate_data: function() {
+                    axios.get('http://localhost:3000/api/ambilservice').then(response => this.srv=response.data);
+                  }
+               },
+               mounted() {
+                    axios.get('http://localhost:3000/api/ambilservice').then(response => this.srv=response.data);
+                    this.upDate_data();
+                    this.timer = setInterval(this.upDate_data, 1000);
+              }
+      })
+
+      ///object vue catalog
+var catalog = new Vue({    
+               el:'#ctl',
+               data: {
+                  ctl:[],
+                },
+               methods: {
+                  upDate_data: function() {
+                    axios.get('http://localhost:3000/api/ambilcatalog').then(response => this.ctl=response.data);
+                  }
+               },
+               mounted() {
+                    axios.get('http://localhost:3000/api/ambilcatalog').then(response => this.ctl=response.data);
+                    this.upDate_data();
+                    this.timer = setInterval(this.upDate_data, 1000);
+              }
+      })
+
+  </script>
+
+</body>
+
+</html>
